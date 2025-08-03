@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Di Como Tech - Soluzioni WhatsApp Bot per PMI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        .whatsapp-bg { background-color: #128C7E; }
+        .whatsapp-bg-light { background-color: #D9F7D1; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full whatsapp-bg flex items-center justify-center">
+                    <i class="fab fa-whatsapp text-white text-xl"></i>
+                </div>
+                <span class="font-bold text-xl text-gray-800">Di Como Tech</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-blue-600 transition">Funzionalità</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-blue-600 transition">Come Funziona</a>
+                <a href="#pricing" class="text-gray-600 hover:text-blue-600 transition">Prezzi</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition">Clienti</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition">Contatti</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition">
+                    Richiedi Demo
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#features" class="text-gray-600 hover:text-blue-600 transition py-2">Funzionalità</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-blue-600 transition py-2">Come Funziona</a>
+                <a href="#pricing" class="text-gray-600 hover:text-blue-600 transition py-2">Prezzi</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition py-2">Clienti</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition py-2">Contatti</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg transition mt-2">
+                    Richiedi Demo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Automatizza il Tuo Business con <span class="text-yellow-300">WhatsApp</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-90">
+                Soluzioni di chatbot intelligenti per piccole e medie imprese. Risparmia tempo, aumenta le vendite e migliora il servizio clienti.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-white text-blue-700 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg text-lg transition shadow-lg">
+                    Inizia Gratuitamente
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-20 font-semibold px-8 py-4 rounded-lg text-lg transition">
+                    Guarda la Demo
+                </a>
+            </div>
+            <div class="mt-16 flex justify-center">
+                <div class="bg-white rounded-2xl shadow-xl p-4 max-w-md w-full">
+                    <div class="whatsapp-bg rounded-xl p-4 text-white">
+                        <div class="flex items-center mb-3">
+                            <div class="w-10 h-10 rounded-full bg-white bg-opacity-20 flex items-center justify-center mr-3">
+                                <i class="fab fa-whatsapp text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Assistente Virtuale</div>
+                                <div class="text-xs opacity-80">Online ora</div>
+                            </div>
+                        </div>
+                        <div class="bg-white bg-opacity-20 rounded-lg p-3 mb-3">
+                            <p class="text-sm">Ciao! Come posso aiutarti oggi?</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="bg-white text-green-800 text-xs px-3 py-1 rounded-full">Preventivi</button>
+                            <button class="bg-white text-green-800 text-xs px-3 py-1 rounded-full">Orari</button>
+                            <button class="bg-white text-green-800 text-xs px-3 py-1 rounded-full">Info</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Funzionalità Potenti per la Tua Azienda</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Tutto ciò di cui hai bisogno per automatizzare le comunicazioni con i clienti su WhatsApp
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full whatsapp-bg flex items-center justify-center mb-5">
+                        <i class="fas fa-robot text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Chatbot Intelligenti</h3>
+                    <p class="text-gray-600">Risposte automatiche 24/7 per domande frequenti, prenotazioni e assistenza clienti base.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full whatsapp-bg flex items-center justify-center mb-5">
+                        <i class="fas fa-sync-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Integrazioni Facili</h3>
+                    <p class="text-gray-600">Collega i tuoi sistemi esistenti: CRM, e-commerce, gestionali e strumenti di marketing.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full whatsapp-bg flex items-center justify-center mb-5">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Analytics Avanzate</h3>
+                    <p class="text-gray-600">Monitora le performance, traccia le conversazioni e ottimizza le tue strategie.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full whatsapp-bg flex items-center justify-center mb-5">
+                        <i class="fas fa-bullhorn text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Campagne Broadcast</h3>
+                    <p class="text-gray-600">Invia promozioni, aggiornamenti e comunicazioni a segmenti di clienti specifici.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full whatsapp-bg flex items-center justify-center mb-5">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Gestione Team</h3>
+                    <p class="text-gray-600">Assegna conversazioni, monitora le performance e collabora con il tuo team.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover">
+                    <div class="w-14 h-14 rounded-full whatsapp-bg flex items-center justify-center mb-5">
+                        <i class="fas fa-lock text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Sicurezza Garantita</h3>
+                    <p class="text-gray-600">Crittografia end-to-end e conformità GDPR per la massima protezione dei dati.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Come Funziona</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Attiva il tuo WhatsApp bot in pochi semplici passaggi
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="w-16 h-16 rounded-full whatsapp-bg flex items-center justify-center text-white font-bold text-xl mb-4 md:mb-0 md:mr-8 flex-shrink-0">
+                        1
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Registra il Tuo Numero Business</h3>
+                        <p class="text-gray-600">Configura il tuo numero WhatsApp Business API con la nostra assistenza dedicata.</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="w-16 h-16 rounded-full whatsapp-bg flex items-center justify-center text-white font-bold text-xl mb-4 md:mb-0 md:mr-8 flex-shrink-0">
+                        2
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Personalizza il Tuo Bot</h3>
+                        <p class="text-gray-600">Crea flussi di conversazione, risposte automatiche e integra i tuoi sistemi.</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="w-16 h-16 rounded-full whatsapp-bg flex items-center justify-center text-white font-bold text-xl mb-4 md:mb-0 md:mr-8 flex-shrink-0">
+                        3
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Lancia e Monitora</h3>
+                        <p class="text-gray-600">Attiva il bot e inizia a interagire con i clienti. Monitora i risultati dalla dashboard.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition shadow-lg">
+                    Inizia Ora - 14 Giorni Gratuiti
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Piani su Misura per la Tua Azienda</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Soluzioni flessibili per aziende di ogni dimensione
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="border border-gray-200 rounded-xl p-8 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Starter</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">A partire da €19</span>
+                        <span class="text-gray-600">/mese</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Fino a 1.000 conversazioni/mese</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">1 utente</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Chatbot base</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Analytics essenziali</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Supporto email</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 rounded-lg transition inline-block text-center">
+                        Inizia Gratis
+                    </a>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="border-2 border-blue-600 rounded-xl p-8 card-hover relative">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Più Popolare
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 mt-4">Professional</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">A partire da €49</span>
+                        <span class="text-gray-600">/mese</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Fino a 5.000 conversazioni/mese</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">5 utenti</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Chatbot avanzato + NLP</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Analytics complete</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Integrazioni API</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Supporto prioritario</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition inline-block text-center">
+                        Inizia Gratis
+                    </a>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="border border-gray-200 rounded-xl p-8 card-hover">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Enterprise</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-800">Personalizzato</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Conversazioni illimitate</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Utenti illimitati</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Chatbot personalizzati</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Integrazioni su misura</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Dedicated Account Manager</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span class="text-gray-600">SLA garantito</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="w-full border border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 rounded-lg transition inline-block text-center">
+                        Contattaci
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 text-gray-600">
+                <p>Tutti i piani includono 14 giorni di prova gratuita. Nessuna carta di credito richiesta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Cosa Dicono i Nostri Clienti</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Scopri come le aziende stanno trasformando la loro comunicazione con WhatsApp
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Laura Bianchi</h4>
+                            <p class="text-sm text-gray-600">CEO, Moda Italiana</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Grazie a Di Como Tech abbiamo ridotto i tempi di risposta del 70% e aumentato le vendite del 35%. Il bot gestisce le domande frequenti e il nostro team si concentra sui clienti importanti."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Marco Rossi</h4>
+                            <p class="text-sm text-gray-600">Direttore, Ristorante Il Gusto</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Le prenotazioni via WhatsApp sono aumentate del 50% dopo aver implementato il bot. I nostri clienti apprezzano la possibilità di prenotare in qualsiasi momento senza dover chiamare."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Giulia Verdi</h4>
+                            <p class="text-sm text-gray-600">Marketing Manager, TechStore</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Le campagne broadcast su WhatsApp hanno un tasso di apertura del 98% e un CTR del 25%, molto più alto di email e SMS. Di Como Tech ci ha aiutato a sfruttare questo canale in modo efficace."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto a Trasformare la Tua Comunicazione?</h2>
+            <p class="text-xl mb-10 max-w-3xl mx-auto opacity-90">
+                Unisciti a centinaia di aziende che stanno già automatizzando le loro conversazioni con WhatsApp
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-white text-blue-700 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg text-lg transition shadow-lg">
+                    Inizia la Tua Prova Gratuita
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-20 font-semibold px-8 py-4 rounded-lg text-lg transition">
+                    Prenota una Demo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contattaci</h2>
+                    <p class="text-xl text-gray-600">
+                        Il nostro team è pronto ad aiutarti a trovare la soluzione perfetta per la tua azienda
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12 text-center">
+                    <div class="max-w-2xl mx-auto">
+                        <div class="w-20 h-20 rounded-full whatsapp-bg flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-envelope text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Scrivici per Iniziare</h3>
+                        <p class="text-gray-600 mb-8">
+                            Invia un'email al nostro team per richiedere una demo, maggiori informazioni o per iniziare la tua prova gratuita. Ti risponderemo il prima possibile!
+                        </p>
+                        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+                            <div class="flex items-center justify-center">
+                                <i class="fas fa-envelope text-blue-600 text-xl mr-3"></i>
+                                <a href="mailto:dicomotech@icloud.com" class="text-xl font-semibold text-blue-600 hover:text-blue-800 transition">
+                                    dicomotech@icloud.com
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Inviaci un'email con le tue esigenze specifiche e ti contatteremo per personalizzare la soluzione più adatta a te.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full whatsapp-bg flex items-center justify-center">
+                            <i class="fab fa-whatsapp text-white text-xl"></i>
+                        </div>
+                        <span class="font-bold text-xl">Di Como Tech</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Soluzioni WhatsApp Bot per piccole e medie imprese. Automatizza, cresci e successo.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Prodotti</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">WhatsApp Bot</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Chatbot NLP</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Broadcast</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Analytics</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Azienda</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Chi Siamo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Lavora con Noi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partner</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Supporto</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Centro Assistenza</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Documentazione</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">API</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Stato Sistema</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Di Como Tech. Tutti i diritti riservati. | <a href="#" class="hover:text-white transition">Privacy Policy</a> | <a href="#" class="hover:text-white transition">Termini di Servizio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
